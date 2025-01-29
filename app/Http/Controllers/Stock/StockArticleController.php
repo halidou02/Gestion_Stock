@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class StockArticleController extends Controller
 {
-    //
+  //Retourner la page
+  function index (){
+    return view('Stock.StockArticle');
+  }
 }

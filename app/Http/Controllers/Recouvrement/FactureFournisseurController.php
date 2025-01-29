@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class FactureFournisseurController extends Controller
 {
-    //
+  //Retourner la page
+  function index(){
+    return view('Recouvrement.FactureFournisseur');
+  }
 }

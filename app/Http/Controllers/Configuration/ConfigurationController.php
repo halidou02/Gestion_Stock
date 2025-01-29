@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class ConfigurationController extends Controller
 {
-    //
+    //Retourner la page
+    function index(){
+      return view ('Configuration.Configuration');
+    }
 }

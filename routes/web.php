@@ -369,7 +369,7 @@ Route::middleware([
 });
 
 
-//Aceuill
+//Acceuill
 use App\Http\Controllers\Acceuil\AcceuilController;
 Route::get('/Acceuil',[AcceuilController::class, 'index'])->name('Acceuil');
 
@@ -379,3 +379,68 @@ use App\Http\Controllers\ClientFournisseur\FournisseurController;
 
 Route::get('/Client',[ClientController::class, 'index'])->name('Client');
 Route::get('/Fournisseur',[ClientController::class, 'index'])->name('Fournisseur');
+
+//Article
+use App\Http\Controllers\Article\ArticleController;
+Route::get('/Article',[ArticleController::class, 'index'])->name('Article');
+
+//Stock
+use App\Http\Controllers\Stock\MouvementStockController;
+use App\Http\Controllers\Stock\RegularisationController;
+use App\Http\Controllers\Stock\StockArticleController;
+
+Route::get('/MouvementStock',[MouvementStockController::class, 'index'])->name('Mouvement Stock');
+Route::get('/Regularisation',[RegularisationController::class, 'index'])->name('Regularisation');
+Route::get('/StockArticle',[StockArticleController::class, 'index'])->name('Stock Article');
+
+//Achat Fournisseur
+use App\Http\Controllers\AchatFournisseur\CommandeController;
+use App\Http\Controllers\AchatFournisseur\FactureController;
+use App\Http\Controllers\AchatFournisseur\ReceptionController;
+
+Route::get('/Commande',[CommandeController::class, 'index'])->name('Commande');
+Route::get('/Facture',[FactureController::class, 'index'])->name('Facture');
+Route::get('/Reception',[ReceptionController::class, 'index'])->name('Reception');
+
+//Vente Client
+use App\Http\Controllers\VenteClient\DevisController;
+use App\Http\Controllers\VenteClient\FactureClientController;
+use App\Http\Controllers\VenteClient\LivraisonController;
+use App\Http\Controllers\VenteClient\CommandeClientController;
+
+Route::get('/Devis',[DevisController::class, 'index'])->name('Devis');
+Route::get('/FactureClient',[FactureClientController::class, 'index'])->name('Facture Client');
+Route::get('/Livraison',[LivraisonController::class, 'index'])->name('Livraison');
+Route::get('/CommandeClient',[CommandeClientController::class, 'index'])->name('Commande Client');
+
+//Recouvrement
+use App\Http\Controllers\Recouvrement\EtatClientController;
+use App\Http\Controllers\Recouvrement\EtatFournisseurController;
+use App\Http\Controllers\Recouvrement\FactureClientsController;
+use App\Http\Controllers\Recouvrement\PaiementClientController;
+use App\Http\Controllers\Recouvrement\FactureFournisseurController;
+use App\Http\Controllers\Recouvrement\PaiementFournisseurController;
+
+Route::get('/EtatClient',[EtatClientController::class, 'index'])->name('Etat Client');
+Route::get('/EtatFournisseur',[EtatFournisseurController::class, 'index'])->name('Etat Fournissuer');
+Route::get('/FactureClients',[FactureClientsController::class, 'index'])->name('Facture Clients');
+Route::get('/PaiementClient',[PaiementClientController::class, 'index'])->name('Paiement Client');
+Route::get('/FactureFournisseur',[FactureFournisseurController::class, 'index'])->name('Facture Fournisseur');
+Route::get('/PaiementFournisseur',[PaiementFournisseurController::class, 'index'])->name('Paiement Fournisseur');
+
+//Caisse
+use App\Http\Controllers\Caisse\CaisseController;
+use App\Http\Controllers\Caisse\RegistreCaisseController;
+use App\Http\Controllers\Caisse\RegistreDepenseController;
+use App\Http\Controllers\Caisse\RegistreVenteController;
+use App\Http\Controllers\Caisse\RegistreVenteSuspendusController;
+
+Route::get('/Caisse',[CaisseController::class, 'index'])->name('caisse-caisse');
+Route::get('/RegistreCaisse',[RegistreCaisseController::class, 'index'])->name('caisse-registre-caisse');
+Route::get('/RegistreDepense',[RegistreDepenseController::class, 'index'])->name('caisse-registre-depense');
+Route::get('/RegistreVente',[RegistreVenteController::class, 'index'])->name('caisse-registre-vente');
+Route::get('/RegistreVenteSuspendus',[RegistreVenteSuspendusController::class, 'index'])->name('caisse-registre-vente-suspendus');
+
+//Configuration
+use App\Http\Controllers\Configuration\ConfigurationController;
+Route::get('/Configuration',[ConfigurationController::class, 'index'])->name('Configuration');

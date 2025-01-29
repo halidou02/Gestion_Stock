@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class PaiementClientController extends Controller
 {
-    //
+    //Retourner la page
+  function index(){
+    return view('Recouvrement.PaiementClient');
+  }
 }

@@ -7,5 +7,9 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    //
+  //Retourner la page
+  public function index()
+  {
+    return view('Article/Article');
+  }
 }

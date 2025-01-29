@@ -241,69 +241,69 @@
     {
       "name": "Recouvrement",
       "icon": "menu-icon tf-icons ti ti-brand-php",
-      "slug": "Stock",
+      "slug": "recouvrement",
       "submenu": [
         {
           "url": "laravel/user-management",
           "name": "Etat Fournisseur",
-          "slug": "Client-&-Fournisseur-Client"
+          "slug": "recouvrement-etat-fournisseur"
         },
         {
-          "url": "laravel/user-management",
+          "url": "FactureFournisseur",
           "name": "Facture Fournisseur",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "recouvrement-facture-fournisseur"
         },
         {
-          "url": "laravel/user-management",
+          "url": "PaiementFournisseur",
           "name": "Paiement Fournisseur",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "recouvrement-paiement-fournisseur"
         },
         {
-          "url": "laravel/user-management",
+          "url": "EtatClient",
           "name": "Etat Client",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "recouvrement-etat-client"
         },
         {
-          "url": "laravel/user-management",
+          "url": "FactureClients",
           "name": "Facture Client",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "recouvrement-facture-client"
         },
         {
-          "url": "laravel/user-management",
+          "url": "PaiementClient",
           "name": "Paiement Client",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "recouvrement-paiement-client"
         }
       ]
     },
     {
       "name": "Caisse",
       "icon": "menu-icon tf-icons ti ti-brand-php",
-      "slug": "Caisse",
+      "slug": "caisse",
       "submenu": [
         {
-          "url": "laravel/user-management",
+          "url": "Caisse",
           "name": "Caisse",
-          "slug": "Client-&-Fournisseur-Client"
+          "slug": "caisse-caisse"
         },
         {
-          "url": "laravel/user-management",
+          "url": "RegistreCaisse",
           "name": "Registre caisse",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "caisse-registre-caisse"
         },
         {
-          "url": "laravel/user-management",
+          "url": "RegistreVente",
           "name": "Registre ventes",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "caisse-registre-vente"
         },
         {
-          "url": "laravel/user-management",
-          "name": "Registre ventes suspendues",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "url": "RegistreVenteSuspendus",
+          "name": "Ventes suspendues",
+          "slug": "caisse-registre-vente-suspendus"
         },
         {
-          "url": "laravel/user-management",
+          "url": "RegistreDepense",
           "name": "Registre dépenses",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "caisse-registre-depense"
         }
       ]
     },

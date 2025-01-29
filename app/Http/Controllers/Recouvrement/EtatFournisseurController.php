@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class EtatFournisseurController extends Controller
 {
-    //
+    //Retourner la page
+  function index(){
+    return view('Recouvrement.EtatFournisseur');
+  }
 }

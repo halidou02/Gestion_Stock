@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class RegistreDepenseController extends Controller
 {
-    //
+    //Retourner la page
+    function index (){
+      return view('Caisse.RegistreDepense');
+    }
 }
