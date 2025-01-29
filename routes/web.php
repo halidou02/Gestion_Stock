@@ -159,6 +159,7 @@ use App\Http\Controllers\charts\ApexCharts;
 use App\Http\Controllers\charts\ChartJs;
 use App\Http\Controllers\maps\Leaflet;
 
+
 // Main Page Route
 Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
 Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
@@ -357,3 +358,24 @@ Route::get('/maps/leaflet', [Leaflet::class, 'index'])->name('maps-leaflet');
 // laravel example
 Route::get('/laravel/user-management', [UserManagement::class, 'UserManagement'])->name('laravel-example-user-management');
 Route::resource('/user-list', UserManagement::class);
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('/');
+    })->name('dashboard');
+});
+
+
+//Aceuill
+use App\Http\Controllers\Acceuil\AcceuilController;
+Route::get('/Acceuil',[AcceuilController::class, 'index'])->name('Acceuil');
+
+//Client et Fournisseur
+use App\Http\Controllers\ClientFournisseur\ClientController;
+use App\Http\Controllers\ClientFournisseur\FournisseurController;
+
+Route::get('/Client',[ClientController::class, 'index'])->name('Client');
+Route::get('/Fournisseur',[ClientController::class, 'index'])->name('Fournisseur');
