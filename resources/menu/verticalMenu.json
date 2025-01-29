@@ -170,71 +170,71 @@
     {
       "name": "Stock",
       "icon": "menu-icon tf-icons ti ti-brand-php",
-      "slug": "Stock",
+      "slug": "stock",
       "submenu": [
         {
-          "url": "laravel/user-management",
+          "url": "StockArticle",
           "name": "Stock Article",
-          "slug": "Client-&-Fournisseur-Client"
+          "slug": "stock-Article"
         },
         {
-          "url": "laravel/user-management",
+          "url": "Regularisation",
           "name": "Regularisation",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "stock-regularisation"
         },
         {
-          "url": "laravel/user-management",
+          "url": "MouvementStock",
           "name": "Mouvement Stock",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "stock-mouvement"
         }
       ]
     },
     {
       "name": "Achat Fournisseur",
       "icon": "menu-icon tf-icons ti ti-brand-php",
-      "slug": "Stock",
+      "slug": "achatFournisseur",
       "submenu": [
         {
-          "url": "laravel/user-management",
+          "url": "Commande",
           "name": "Commande",
-          "slug": "Client-&-Fournisseur-Client"
+          "slug": "achatFournisseur-commande"
         },
         {
-          "url": "laravel/user-management",
+          "url": "Reception",
           "name": "Reception",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "achatFournisseur-reception"
         },
         {
-          "url": "laravel/user-management",
+          "url": "Facture",
           "name": "Facture",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "achatFournisseur-facture"
         }
       ]
     },
     {
       "name": "Vente Client",
       "icon": "menu-icon tf-icons ti ti-brand-php",
-      "slug": "Stock",
+      "slug": "venteClient",
       "submenu": [
         {
-          "url": "laravel/user-management",
+          "url": "Devis",
           "name": "Devis",
-          "slug": "Client-&-Fournisseur-Client"
+          "slug": "venteClient-devis"
         },
         {
-          "url": "laravel/user-management",
+          "url": "CommandeClient",
           "name": "Commande",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "venteClient-commande"
         },
         {
-          "url": "laravel/user-management",
+          "url": "Livraison",
           "name": "Livraison",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "venteClient-livraison"
         },
         {
-          "url": "laravel/user-management",
+          "url": "FactureClient",
           "name": "Facture",
-          "slug": "Client-&-Fournisseur-Fournisseur"
+          "slug": "venteClient-facture"
         }
       ]
     },
@@ -244,7 +244,7 @@
       "slug": "recouvrement",
       "submenu": [
         {
-          "url": "laravel/user-management",
+          "url": "EtatFournisseur",
           "name": "Etat Fournisseur",
           "slug": "recouvrement-etat-fournisseur"
         },

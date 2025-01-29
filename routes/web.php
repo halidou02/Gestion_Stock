@@ -377,8 +377,8 @@ Route::get('/Acceuil',[AcceuilController::class, 'index'])->name('Acceuil');
 use App\Http\Controllers\ClientFournisseur\ClientController;
 use App\Http\Controllers\ClientFournisseur\FournisseurController;
 
-Route::get('/Client',[ClientController::class, 'index'])->name('Client');
-Route::get('/Fournisseur',[ClientController::class, 'index'])->name('Fournisseur');
+Route::get('/Client',[ClientController::class, 'index'])->name('Client-&-Fournisseur-Client');
+Route::get('/Fournisseur',[ClientController::class, 'index'])->name('Client-&-Fournisseur-Fournisseur');
 
 //Article
 use App\Http\Controllers\Article\ArticleController;
@@ -389,18 +389,18 @@ use App\Http\Controllers\Stock\MouvementStockController;
 use App\Http\Controllers\Stock\RegularisationController;
 use App\Http\Controllers\Stock\StockArticleController;
 
-Route::get('/MouvementStock',[MouvementStockController::class, 'index'])->name('Mouvement Stock');
-Route::get('/Regularisation',[RegularisationController::class, 'index'])->name('Regularisation');
-Route::get('/StockArticle',[StockArticleController::class, 'index'])->name('Stock Article');
+Route::get('/MouvementStock',[MouvementStockController::class, 'index'])->name('stock-mouvement');
+Route::get('/Regularisation',[RegularisationController::class, 'index'])->name('stock-regularisation');
+Route::get('/StockArticle',[StockArticleController::class, 'index'])->name('stock-Article');
 
 //Achat Fournisseur
 use App\Http\Controllers\AchatFournisseur\CommandeController;
 use App\Http\Controllers\AchatFournisseur\FactureController;
 use App\Http\Controllers\AchatFournisseur\ReceptionController;
 
-Route::get('/Commande',[CommandeController::class, 'index'])->name('Commande');
-Route::get('/Facture',[FactureController::class, 'index'])->name('Facture');
-Route::get('/Reception',[ReceptionController::class, 'index'])->name('Reception');
+Route::get('/Commande',[CommandeController::class, 'index'])->name('achatFournisseur-commande');
+Route::get('/Facture',[FactureController::class, 'index'])->name('achatFournisseur-facture');
+Route::get('/Reception',[ReceptionController::class, 'index'])->name('achatFournisseur-reception');
 
 //Vente Client
 use App\Http\Controllers\VenteClient\DevisController;
@@ -408,10 +408,10 @@ use App\Http\Controllers\VenteClient\FactureClientController;
 use App\Http\Controllers\VenteClient\LivraisonController;
 use App\Http\Controllers\VenteClient\CommandeClientController;
 
-Route::get('/Devis',[DevisController::class, 'index'])->name('Devis');
-Route::get('/FactureClient',[FactureClientController::class, 'index'])->name('Facture Client');
-Route::get('/Livraison',[LivraisonController::class, 'index'])->name('Livraison');
-Route::get('/CommandeClient',[CommandeClientController::class, 'index'])->name('Commande Client');
+Route::get('/Devis',[DevisController::class, 'index'])->name('venteClient-devis');
+Route::get('/FactureClient',[FactureClientController::class, 'index'])->name('venteClient-facture');
+Route::get('/Livraison',[LivraisonController::class, 'index'])->name('venteClient-livraison');
+Route::get('/CommandeClient',[CommandeClientController::class, 'index'])->name('venteClient-commande');
 
 //Recouvrement
 use App\Http\Controllers\Recouvrement\EtatClientController;
@@ -421,12 +421,12 @@ use App\Http\Controllers\Recouvrement\PaiementClientController;
 use App\Http\Controllers\Recouvrement\FactureFournisseurController;
 use App\Http\Controllers\Recouvrement\PaiementFournisseurController;
 
-Route::get('/EtatClient',[EtatClientController::class, 'index'])->name('Etat Client');
-Route::get('/EtatFournisseur',[EtatFournisseurController::class, 'index'])->name('Etat Fournissuer');
-Route::get('/FactureClients',[FactureClientsController::class, 'index'])->name('Facture Clients');
-Route::get('/PaiementClient',[PaiementClientController::class, 'index'])->name('Paiement Client');
-Route::get('/FactureFournisseur',[FactureFournisseurController::class, 'index'])->name('Facture Fournisseur');
-Route::get('/PaiementFournisseur',[PaiementFournisseurController::class, 'index'])->name('Paiement Fournisseur');
+Route::get('/EtatClient',[EtatClientController::class, 'index'])->name('recouvrement-etat-client');
+Route::get('/EtatFournisseur',[EtatFournisseurController::class, 'index'])->name('recouvrement-etat-fournisseur');
+Route::get('/FactureClients',[FactureClientsController::class, 'index'])->name('recouvrement-facture-client');
+Route::get('/PaiementClient',[PaiementClientController::class, 'index'])->name('recouvrement-paiement-client');
+Route::get('/FactureFournisseur',[FactureFournisseurController::class, 'index'])->name('recouvrement-facture-fournisseur');
+Route::get('/PaiementFournisseur',[PaiementFournisseurController::class, 'index'])->name('recouvrement-paiement-fournisseur');
 
 //Caisse
 use App\Http\Controllers\Caisse\CaisseController;
